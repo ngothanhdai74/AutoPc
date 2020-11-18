@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,12 @@ namespace AutoPc
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Process.Start("notepad.exe");
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"D:\secret_at_git\Beethoven - Für Elise (60 Minutes Version).mp3");
         }
     }
 }

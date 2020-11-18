@@ -20,11 +20,22 @@ namespace AutoPc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Process.Start("notepad.exe");
+            try
+            {
+                //Process.Start("firefox");
+                Process.Start("WinSCP");
+                //Process.Start("notepad.exe");
+            }
+            catch (Exception ex)
+            {
+                Process.Start("firefox");
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            var data = AppDomain.CurrentDomain.BaseDirectory;
             Process.Start(@"D:\secret_at_git\Beethoven - Für Elise (60 Minutes Version).mp3");
         }
     }

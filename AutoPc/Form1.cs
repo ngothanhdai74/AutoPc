@@ -75,5 +75,28 @@ namespace AutoPc
             //Cursor.Position = new Point(x, y);
             AutoControl.MouseClick(x, y, EMouseKey.LEFT);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var aaa = Process.GetProcessesByName("chrome").FirstOrDefault();
+            if (aaa != null)
+            {
+                Process.Start("chrome");
+            }
+            else
+            {
+                Process.Start("chrome");
+            }
+
+            //var aaa = Process.GetProcessesByName("Taskmgr").FirstOrDefault();
+            //if (aaa != null)
+            //{
+            //    aaa.Kill();
+            //}
+            //else
+            //{
+            //    Process.Start("Taskmgr");
+            //}
+        }
     }
 }

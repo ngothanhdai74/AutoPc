@@ -72,9 +72,8 @@ namespace AutoPc
         {
             int x = (int)trucX.Value;
             int y = (int)trucY.Value;
-
+            //Cursor.Position = new Point(x, y);
             AutoControl.MouseClick(x, y, EMouseKey.LEFT);
-
         }
     }
 }

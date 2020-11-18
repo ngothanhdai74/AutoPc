@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KAutoHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,15 @@ namespace AutoPc
             p.WaitForExit();
 
             MessageBox.Show(p.StandardOutput.ReadToEnd());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int x = (int)trucX.Value;
+            int y = (int)trucY.Value;
+
+            AutoControl.MouseClick(x, y, EMouseKey.LEFT);
+
         }
     }
 }

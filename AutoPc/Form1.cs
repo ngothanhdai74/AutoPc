@@ -78,24 +78,19 @@ namespace AutoPc
 
         private void button6_Click(object sender, EventArgs e)
         {
-            var aaa = Process.GetProcessesByName("chrome").FirstOrDefault();
-            if (aaa != null)
-            {
-                Process.Start("chrome");
-            }
-            else
-            {
-                Process.Start("chrome");
-            }
+            IntPtr @int = AutoControl.FindWindowHandle(null, "Remote Desktop Connection");
 
-            //var aaa = Process.GetProcessesByName("Taskmgr").FirstOrDefault();
+            MessageBox.Show(@int.ToString());
+
+
+            //var aaa = Process.GetProcessesByName("devenv").FirstOrDefault();
             //if (aaa != null)
             //{
             //    aaa.Kill();
             //}
             //else
             //{
-            //    Process.Start("Taskmgr");
+            //    Process.Start("devenv");
             //}
         }
     }

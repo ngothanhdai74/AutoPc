@@ -78,7 +78,13 @@ namespace AutoPc
 
         private void button6_Click(object sender, EventArgs e)
         {
-            IntPtr @int = AutoControl.FindWindowHandle(null, "Remote Desktop Connection");
+            IntPtr @int = AutoControl.FindWindowHandle("Microsoft Visual Studio ", null);
+
+            int x = (int)trucX.Value;
+            int y = (int)trucY.Value;
+            var pointToClick = AutoControl.GetGlobalPoint(@int, x, y);
+            AutoControl.BringToFront(@int);
+            AutoControl.MouseClick(pointToClick);
 
             MessageBox.Show(@int.ToString());
 
